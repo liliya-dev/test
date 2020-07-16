@@ -1,0 +1,86 @@
+.form {
+  &__container {
+    width: 100%;
+    height: 550px;
+    padding: 50px 30px 0;
+    box-sizing: border-box;
+    
+    background-size: cover;
+    background-image: url("../images/header/rectangle-white.png");
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+    text-align: center;
+  }
+
+  &__input {
+    height: 60px;
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+    background-color: #edf2f7;
+    border-radius: 25px;
+    border: none;
+
+    position: relative;
+    outline: none;
+    transition: background-color 0.7s;
+
+    &:focus {
+      background-color: #d7dee6;
+    }
+
+    &-tel {
+      background-image: url("../images/header/tel.png");
+      background-repeat: no-repeat;
+      background-position: 7% 50%;
+    }
+
+    &-name {
+      background-image: url("../images/header/person.png");
+      background-repeat: no-repeat;
+      background-position: 7% 50%;
+    }
+  }
+
+  &__text-security {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  &__button {
+    height: 70px;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+
+    position: relative;
+    margin-bottom: 20px;
+
+    border-radius: 25px;
+    border: none;
+    outline: none;
+
+    transition: opacity 0.7s, transform 0.7s;
+
+    &-text {
+      width: 97%;
+      height: 97%;
+      padding: 6px 0;
+      line-height: 20px;
+      box-sizing: border-box;
+
+      display: inline-block;
+      border-radius: 25px;
+      border: 1px solid yellow;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+      opacity: 0.7;
+    }
+  }
+}
