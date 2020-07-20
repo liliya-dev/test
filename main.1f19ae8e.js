@@ -120,45 +120,44 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"main.js":[function(require,module,exports) {
 var phone = document.querySelector('#tel');
 var name = document.querySelector('#name');
-var phone_error = document.querySelector('.error-phone');
-var name_error = document.querySelector('.error-name');
+var phoneError = document.querySelector('.error-phone');
+var nameError = document.querySelector('.error-name');
 var button = document.querySelector('.form__button');
-var correct_phone = false;
-var correct_name = false;
+var correctPhone = false;
+var correctName = false;
 phone.addEventListener('change', function (event) {
   event.preventDefault();
-  var pattern = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/gmi;
+  var pattern = /^((8|\+7)[ - ]?)?(\(?\d{3}\)?[ - ]?)?[\d\- ]{7,10}$/gmi;
 
   if (!pattern.test(event.target.value)) {
-    phone_error.style.display = 'block';
-    correct_phone = false;
+    phoneError.style.display = 'block';
+    correctPhone = false;
   } else {
-    correct_phone = true;
+    correctPhone = true;
   }
 });
 phone.addEventListener('input', function (event) {
   event.preventDefault();
-  phone_error.style.display = 'none';
+  phoneError.style.display = 'none';
 });
 name.addEventListener('change', function (event) {
-  console.log(111);
   event.preventDefault();
 
   if (event.target.value.trim() === '' || /[0-9]/.test(event.target.value)) {
-    name_error.style.display = 'block';
-    correct_name = false;
+    nameError.style.display = 'block';
+    correctName = false;
   } else {
-    correct_name = true;
+    correctName = true;
   }
 });
 name.addEventListener('input', function (event) {
   event.preventDefault();
-  name_error.style.display = 'none';
+  nameError.style.display = 'none';
 });
 button.addEventListener('click', function (event) {
   event.preventDefault();
 
-  if (correct_name && correct_phone) {
+  if (correctName && correctPhone) {
     phone.value = '';
     name.value = '';
   }
@@ -191,7 +190,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52848" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59976" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
