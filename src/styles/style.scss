@@ -124,6 +124,7 @@
 }
 
 .priority {
+  box-sizing: border-box;
   display: flex;
   width: 31%;
 
@@ -182,32 +183,6 @@
   }
 }
 
-.prices {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px 0;
-}
-
-.price {
-  padding: 0 10px;
-  border-radius: 5px;
-
-  &-new {
-    animation: color-change 1s infinite linear alternate;
-    transform-origin: top;
-  }
-  
-  &-old {
-    position: relative;
-  
-    &::after {
-      content: url("../images/header/cross.png");
-      position: absolute;
-      left: 0;
-    }
-  }
-}
-
 @media screen and (max-width: 1900px) {
   .pros {
     width: 30%;
@@ -218,6 +193,11 @@
     align-items: center;
     justify-content: flex-start;
     background-size: contain;
+
+    &__logo-wrapper {
+      left: 5%;
+      top: 10%;
+    }
 
     &__left {
       min-height: 300px;
@@ -235,11 +215,14 @@
     }
 
     &__right {
-      width: 90%;
-      padding: 0;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 1200px;
+      padding: 5%;
       height: 50%;
 
       &-down {
+        width: 100%;
         justify-content: space-evenly;
       }
     }
@@ -254,30 +237,14 @@
       align-items: center;
     }
 
-    &-form {
-      width: 90%;
-    }
-  }
-  .pros {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &__item {
-      justify-content: space-between;
-    }
-  }
-
-}
-
-@media screen and (max-width: 800px) {
-  .header {
     &__left {
-      height: 200px;
+      height: 150px;
+    }
+
+    &-form {
+      width: 100%;
     }
   }
-
   .pros {
     width: 80%;
     display: flex;
@@ -288,9 +255,18 @@
       justify-content: space-between;
     }
   }
+
 }
 
 @media screen and (max-width: 600px) {
+  .header__left-top {
+    height: 50%;
+  }
+
+  .header__left {
+    min-height: 250px;
+    margin: 0;
+  }
 
   .priority {
     width: 80%;
