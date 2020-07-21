@@ -1,0 +1,282 @@
+@import "./description.scss";
+@import "./general.scss";
+@import  "./form.scss";
+@import "./keyframes.scss";
+@import "./errors.scss";
+
+.header {
+  width: 100%;
+  margin-bottom: 50px;
+  background: url("../images/header/1.png") no-repeat center top;
+  background-size: contain;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &__logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    left: 100%;
+
+    width: 200px;
+    height: 60px;
+  }
+
+  &__logo-name {
+    margin: 0 0 0 10px;
+  }
+
+  &__left {
+    height: 35vw;
+    max-height: 800px;
+    width: 50%;
+    max-width: 700px;
+    min-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &-top {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      width: 50%;
+      height: 75%;
+    }
+
+    &-down {
+      position: relative;
+      width: 50%;
+      height: 25%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+  }
+  &__right {
+    width: 50%;
+    max-width: 700px;
+    padding-left: 40px;
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 55px;
+    }
+
+    &-down {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__form {
+    position: relative;
+    min-width: 250px;
+    width: 40%;
+    padding: 10px;
+
+    background-image: url("../images/header/rectangle-green.png");
+    background-size: cover;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    &::before {
+      content: "Бесплатнo";
+      position: absolute;
+      left: 30%;
+      padding-left: 40px;
+
+      background: url("../images/header/car.png") no-repeat;
+      color: rgb(139, 133, 133);
+
+      &:hover {
+        transform: translateX(50px);
+      }
+    }
+  }
+}
+
+.medicine-img {
+  width: 100%;
+  max-width: 900px;
+
+  position: relative;
+  top: -15%;
+  left: 50px;
+
+  opacity: 0.9;
+  animation: timer 5s infinite linear alternate;
+  transform-origin: top;
+}
+
+.legs-img {
+  max-width: 900px;
+  width: 100%;
+}
+
+.priority {
+  box-sizing: border-box;
+  display: flex;
+  width: 31%;
+
+  &-text {
+    font-style: italic;
+  }
+
+  &-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+
+}
+
+.pros {
+  width: 50%;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &-icon {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    margin: 30px 25px 30px 0;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    border-radius: 50%;
+    border: 5px solid rgb(228, 241, 198);
+    background-color: #a3c83d;
+
+    transition: transform 0.6s;
+    
+    &-center::after {
+      content: url("../images/header/arrow.png");
+      position: absolute;
+      left: calc(50% - 5px);
+      top: -45px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__text {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .pros {
+    width: 30%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: contain;
+
+    &__logo-wrapper {
+      left: 5%;
+      top: 10%;
+    }
+
+    &__left {
+      min-height: 300px;
+      height: 50%;
+      margin-bottom: 50px;
+      justify-content: flex-start;
+
+      &-down {
+        height: 30%;
+      }
+
+      &-top {
+        height: 70%;
+      }
+    }
+
+    &__right {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 1200px;
+      padding: 5%;
+      height: 50%;
+
+      &-down {
+        width: 100%;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    &__right-down {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__left {
+      height: 150px;
+    }
+
+    &-form {
+      width: 100%;
+    }
+  }
+  .pros {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__item {
+      justify-content: space-between;
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .header__left-top {
+    height: 50%;
+  }
+
+  .header__left {
+    min-height: 250px;
+    margin: 0;
+  }
+
+  .priority {
+    width: 80%;
+    margin-bottom: 10px;
+
+    &-list {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+}

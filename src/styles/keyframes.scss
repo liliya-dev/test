@@ -1,0 +1,27 @@
+@keyframes timer {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+  
+@keyframes color-change {
+  from {
+    background-color: #fdc901;
+  }
+  to {
+    background-color: rgb(255, 153, 0);
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  h1 {
+    font-size: 25px;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+}
