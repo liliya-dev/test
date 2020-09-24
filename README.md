@@ -6,6 +6,6 @@
   </Box>
 </Tomato>
 
-<style>{`
+<style>`
   ${1+3}
-`}</style>
+`</style>
