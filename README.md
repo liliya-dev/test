@@ -7,7 +7,5 @@
 </Tomato>
 
 <style>{`
-  .body { margin: 0; }
-  
-  .tomato { color: tomato; }
+  {1+3}
 `}</style>
