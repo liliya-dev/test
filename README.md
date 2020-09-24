@@ -5,3 +5,9 @@
 
   </Box>
 </Tomato>
+
+<style>{`
+  .body { margin: 0; }
+  
+  .tomato { color: tomato; }
+`}</style>
