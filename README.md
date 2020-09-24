@@ -1,7 +1,7 @@
 <Tomato>
   <Box>
 
-# I'm not parsed properly
+{1+3}
 
   </Box>
 </Tomato>
